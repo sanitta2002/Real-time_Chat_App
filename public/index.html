@@ -1,35 +1,40 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
-  <title>Join ChatRoom</title>
-</head>
-<body class="bg-[#0a1b2d] h-screen flex items-center justify-center">
-  <div class="bg-[#12263a] p-8 rounded-2xl shadow-xl w-full max-w-md app">
-    <h2 class="text-2xl font-semibold text-cyan-50 mb-6 text-center">Join ChatRoom</h2>
-    <form id="joinForm" class="flex flex-col space-y-4 join-screen" action="chat.html">
-      <label for="UserName" class="text-cyan-50 text-sm">Username</label>
-      <input 
-        type="text" 
-        id="UserName" 
-        name="UserName" 
-        class="p-2 rounded-md bg-[#1e3a5f] text-white placeholder-gray-400 outline-none focus:ring-2 focus:ring-cyan-400"
-        placeholder="Enter your username"
-        required
-      />
-      <button 
-        type="submit" 
-        class="mt-4 bg-cyan-500 hover:bg-cyan-600 text-white font-medium py-2 rounded-md transition"
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <title>Join ChatRoom</title>
+  </head>
+  <body class="bg-[#0a1b2d] h-screen flex items-center justify-center">
+    <div class="bg-[#12263a] p-8 rounded-2xl shadow-xl w-full max-w-md app">
+      <h2 class="text-2xl font-semibold text-cyan-50 mb-6 text-center">
+        Join ChatRoom
+      </h2>
+      <form
+        id="joinForm"
+        class="flex flex-col space-y-4 join-screen"
+        action="chat.html"
       >
-        Join
-      </button>
-    </form>
-  </div>
+        <label for="UserName" class="text-cyan-50 text-sm">Username</label>
+        <input
+          type="text"
+          id="UserName"
+          name="UserName"
+          class="p-2 rounded-md bg-[#1e3a5f] text-white placeholder-gray-400 outline-none focus:ring-2 focus:ring-cyan-400"
+          placeholder="Enter your username"
+          required
+        />
+        <button
+          type="submit"
+          class="mt-4 bg-cyan-500 hover:bg-cyan-600 text-white font-medium py-2 rounded-md transition"
+        >
+          Join
+        </button>
+      </form>
+    </div>
 
-  <script src="/socket.io/socket.io.js"></script>
-<script src="script.js"></script>
-
-</body>
+    <script src="/socket.io/socket.io.js"></script>
+    <script src="script.js"></script>
+  </body>
 </html>
