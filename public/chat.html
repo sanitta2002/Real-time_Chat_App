@@ -1,0 +1,39 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+  <title>Chat Room</title>
+</head>
+<body class="bg-[#0a1b2d] h-screen flex items-center justify-center">
+
+  <div class="bg-[#1e3a5f] p-6 rounded-xl w-full max-w-2xl flex flex-col h-[80vh]">
+    <h2 class="text-white text-2xl font-bold mb-4 text-center">Welcome to Chat Room</h2>
+
+    <div id="chatBox" class="flex-1 overflow-y-auto bg-[#0f2a42] p-4 rounded-lg text-sm text-white space-y-2 mb-4 chat-screen"></div>
+
+    <form id="chatForm" class="flex gap-2">
+      <input 
+        type="text" 
+        id="messageInput" 
+        class="flex-1 p-2 rounded bg-[#193d5d] text-white placeholder-gray-400 outline-none focus:ring-2 focus:ring-cyan-400"
+        placeholder="Type a message..."
+        autocomplete="off"
+        required
+      />
+      <button 
+        type="submit" 
+        class="bg-cyan-500 hover:bg-cyan-600 px-4 py-2 rounded text-white font-medium transition"
+      >
+        Send
+      </button>
+    </form>
+  </div>
+
+ <script src="/socket.io/socket.io.js"></script>
+<script src="script.js"></script>
+
+</body>
+</html>
